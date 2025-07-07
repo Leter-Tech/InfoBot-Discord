@@ -338,3 +338,38 @@ Here are conversation examples of InfoBot in action:
 - **Advanced Excel Queries:**
 
   - ![Screenshot](landing_page/screenshots/Convo12.png)
+
+---
+
+## 🤝 **Contributing**  
+
+Contributions are always welcome! Please follow these steps:
+
+1. Fork the repository.  
+2. Create a new branch (`git checkout -b feature/your-feature`).  
+3. Commit your changes (`git commit -m 'Add your message'`).  
+4. Push to the branch (`git push origin feature/your-feature`).  
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Install dependencies using `requirements.txt`
+3. Replace the API Keys and database credentials
+4. Run the application
+
+---
+
+## 🛡️ License
+
+This project is shared publicly for learning and inspiration purposes only.
+
+❌ You may **NOT** copy, reuse, redistribute, or modify this code.  
+✅ You may view and learn from the code.
+
+Copyright © | All rights reserved
+
+---
+
+Built with ❤️ to make every Discord communities smarter, friendlier, and more fun.
