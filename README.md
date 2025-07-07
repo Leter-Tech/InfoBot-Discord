@@ -372,4 +372,4 @@ Copyright © | All rights reserved
 
 ---
 
-Built with ❤️ to make every Discord communities smarter, friendlier, and more fun.
+Built with ❤️ to make Discord communities smarter, friendlier, and more fun.
