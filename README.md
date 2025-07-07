@@ -266,7 +266,7 @@ Here are slash commands examples of InfoBot in action:
 
 Here are conversation examples of InfoBot in action:
 
-- **Conversation about sentience:**
+- **Conversation About Sentience:**
 
   - ![Screenshot](landing_page/screenshots/Convo1.png)
 
