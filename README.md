@@ -178,89 +178,89 @@ Here are slash commands examples of InfoBot in action:
 
 - **`/about_infobot` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\About_Command_Screenshot.png)
+  - ![Screenshot](public/screenshots/About_Command_Screenshot.png)
 
 ---
 
 - **`/ask` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Ask_Command.png)
+  - ![Screenshot](public/screenshots/Ask_Command.png)
 
-  - ![Screenshot](landing_page\screenshots\Ask_Command_2.png)
+  - ![Screenshot](public/screenshots/Ask_Command_2.png)
 
 ---
 
 - **`/summarize_chat` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Summarize_Chat_Command.png)
+  - ![Screenshot](public/screenshots/Summarize_Chat_Command.png)
 
 ---
 
 - **`/translate` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Translate_Command_1.png)
+  - ![Screenshot](public/screenshots/Translate_Command_1.png)
 
-  - ![Screenshot](landing_page\screenshots\Translate_Command_2.png)
+  - ![Screenshot](public/screenshots/Translate_Command_2.png)
 
-  - ![Screenshot](landing_page\screenshots\Translate_Command_3.png)
+  - ![Screenshot](public/screenshots/Translate_Command_3.png)
 
 ---
 
 - **`/define` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Define_Command.png)
+  - ![Screenshot](public/screenshots/Define_Command.png)
 
 ---
 
 - **`/summarize` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Summary_Command.png)
+  - ![Screenshot](public/screenshots/Summary_Command.png)
 
-  - ![Screenshot](landing_page\screenshots\Summary_Command_2.png)
+  - ![Screenshot](public/screenshots/Summary_Command_2.png)
 
 ---
 
 - **`/explain` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Explain_Command.png)
+  - ![Screenshot](public/screenshots/Explain_Command.png)
 
 ---
 
 - **`/suggest` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Suggest_Command.png)
+  - ![Screenshot](public/screenshots/Suggest_Command.png)
 
-  - ![Screenshot](landing_page\screenshots\Suggest_Command_1.png)
+  - ![Screenshot](public/screenshots/Suggest_Command_1.png)
 
 ---
 
 - **`/write` Command:**  
 
-  - ![Screenshot](landing_page\screenshots\Write_Command_1.png)
+  - ![Screenshot](public/screenshots/Write_Command_1.png)
 
-  - ![Screenshot](landing_page\screenshots\Write_Command_2.png)
+  - ![Screenshot](public/screenshots/Write_Command_2.png)
 
-  - ![Screenshot](landing_page\screenshots\Write_Command_3.png)
+  - ![Screenshot](public/screenshots/Write_Command_3.png)
 
-  - ![Screenshot](landing_page\screenshots\Write_Command_4.png)
+  - ![Screenshot](public/screenshots/Write_Command_4.png)
 
 ---
 
 - **`/correct` Command:**
 
-  - ![Screenshot](landing_page\screenshots\Correct_Command.png)
+  - ![Screenshot](public/screenshots/Correct_Command.png)
 
 ---
 
 - **`/sentiment_analysis` Command:**
 
-  - ![Screenshot](landing_page\screenshots\Sentiment_Command.png)
+  - ![Screenshot](public/screenshots/Sentiment_Command.png)
 
 ---
 
 - **`/quote` Command:**
 
-  - ![Screenshot](landing_page\screenshots\Quote_Command.png)
+  - ![Screenshot](public/screenshots/Quote_Command.png)
 
 ---
 
@@ -268,73 +268,73 @@ Here are conversation examples of InfoBot in action:
 
 - **Conversation about sentience:**
 
-  - ![Screenshot](landing_page\screenshots\Convo1.png)
+  - ![Screenshot](public/screenshots/Convo1.png)
 
 ---
 
 - **Basic Python Coding:**
 
-  - ![Screenshot](landing_page\screenshots\Convo2.png)
+  - ![Screenshot](public/screenshots/Convo2.png)
 
 ---
 
 - **Riddles and Games:**
 
-  - ![Screenshot](landing_page\screenshots\Convo3_1.png)
-  - ![Screenshot](landing_page\screenshots\Convo3_2.png)
+  - ![Screenshot](public/screenshots/Convo3_1.png)
+  - ![Screenshot](public/screenshots/Convo3_2.png)
 
 ---
 
 - **Coding Quiz:**
 
-  - ![Screenshot](landing_page\screenshots\Convo4.png)
+  - ![Screenshot](public/screenshots/Convo4.png)
 
 ---
 
 - **Math and Chemistry Questions:**
 
-  - ![Screenshot](landing_page\screenshots\Convo5.png)
+  - ![Screenshot](public/screenshots/Convo5.png)
 
 ---
 
 - **Business and Marketing Queries:**
 
-  - ![Screenshot](landing_page\screenshots\Convo6_1.png)
-  - ![Screenshot](landing_page\screenshots\Convo6_2.png)
+  - ![Screenshot](public/screenshots/Convo6_1.png)
+  - ![Screenshot](public/screenshots/Convo6_2.png)
 
 ---
 
 - **Tasks Breakdown and Planning:**
 
-  - ![Screenshot](landing_page\screenshots\Convo7.png)
+  - ![Screenshot](public/screenshots/Convo7.png)
 
 ---
 
 - **Meeting Chat Log Summarization:**
 
-  - ![Screenshot](landing_page\screenshots\Convo8.png)
+  - ![Screenshot](public/screenshots/Convo8.png)
 
 ---
 
 - **Discord Bots and Commands:**
 
-  - ![Screenshot](landing_page\screenshots\Convo9.png)
+  - ![Screenshot](public/screenshots/Convo9.png)
 
 ---
 
 - **Mental Health and Venting:**
 
-  - ![Screenshot](landing_page\screenshots\Convo10.png)
+  - ![Screenshot](public/screenshots/Convo10.png)
 
 ---
 
 - **Codings Bugs:**
 
-  - ![Screenshot](landing_page\screenshots\Convo11_1.png)
-  - ![Screenshot](landing_page\screenshots\Convo11_2.png)
+  - ![Screenshot](public/screenshots/Convo11_1.png)
+  - ![Screenshot](public/screenshots/Convo11_2.png)
 
 ---
 
 - **Advanced Excel Queries:**
 
-  - ![Screenshot](landing_page\screenshots\Convo12.png)
+  - ![Screenshot](public/screenshots/Convo12.png)
