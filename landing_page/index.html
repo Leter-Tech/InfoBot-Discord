@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InfoBot Discord</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+  <link rel="icon" href="Logo.png" type="image/png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Logo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="Logo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="Logo.png">
+  <meta name="msapplication-TileColor" content="#cc4444">
+  <meta name="theme-color" content="#cc4444">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+  .discord-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #5865F2;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 30px auto;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .discord-button:hover {
+    background-color: #4752C4;
+  }
+
+  .button-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #logoBtn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+</style>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121214;
+      margin: 0;
+      padding: 20px;
+      padding-top: 0px;
+    }
+
+    .markdown-body {
+      max-width: 1000px;
+      margin: auto;
+      background: #222327;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      color: #efefef;
+    }
+
+    .markdown-body img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      margin: 10px 0;
+      display: block;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #cc4444;
+      padding: 0.5rem;
+    }
+    code {
+      background: #cc4444;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    pre {
+      background: #cc4444;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+    <div class="button-container">
+      <img id="logoBtn" src="Logo.png" style="width: 150px; margin-top: 25px; cursor: pointer; border-radius: 40px;">
+        <button class="discord-button" id="addToDiscord">
+          <i class="fab fa-discord"></i>
+          Add InfoBot to your server
+        </button>
+      </div>
+      
+  <div class="markdown-body" id="markdown-content"></div>
+
+  <script>
+
+const firebaseConfig = {
+    REMOVED
+};
+
+            firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const database = firebase.database();
+
+            function formatDateToGMT530(date) {
+              const options = {
+                timeZone: 'Asia/Kolkata',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+              };
+              return date.toLocaleString('en-IN', options).replace(',', '');
+        }
+
+
+        document.addEventListener('click', function(event) {
+            const element = event.target;
+        
+            const clickData = {
+                tagName: element.tagName,
+                id: element.id || null,
+                classList: Array.from(element.classList).join(' ') || null,
+                timestamp: formatDateToGMT530(new Date()),
+                page: document.title
+            };
+            firebase.database().ref('clicks').push(clickData);
+        });
+  </script>
+
+  <script>
+    const markdown = `# **InfoBot**
+
+**Ask anything, anytime.**
+
+InfoBot is an intelligent Discord assistant. Mention it or reply to it in any server conversation, and it will respond with helpful, friendly, and context-aware replies. You can also use the slash commands to get assistance directly.
+
+---
+
+## ✨ Features
+
+- 🧠 **AI-Powered Replies:** Mention \`@InfoBot\` or reply to its messages, and it will understand your context and respond accordingly.
+
+- 💬 **Conversational Context:** Replies to threaded messages with prior context when possible.
+
+- 🤖 **Slash Command Support:** Use \`/ask\`, \`/write\` and other commands to get assistance directly from the bot.
+
+- 👤 **Personalized Responses:** Replies directly to users by name for a more natural experience.
+
+- 🔍 **Smart Understanding:** Can answer questions, assist with decisions, or just chat casually.
+
+- ⏳ **Typing Indicator:** Simulates human-like typing when generating responses.
+
+- 📚 **Chat Summarization:** Use \`/summarize_chat\` to summarize recent convos with sender names and key points.
+
+---
+
+## 💡 Use Cases
+
+InfoBot is versatile and can support nearly any type of Discord server. Whether you're managing a casual community, a developer hub, a study group, or a professional team — InfoBot brings AI assistance where it's needed most.
+
+---
+
+### 👥 Community & Chat Servers
+
+- **Friendly Conversation:** Say hi or ask a random question — it’s always ready to talk.
+
+- **Icebreakers & Games:** Get fun questions, trivia, or mini text games to liven up chat.
+
+- **Q&A Helper:** Answer frequently asked questions about the server or topics.
+
+- **Topic Suggestions:** Recommend trending or thoughtful conversation starters.
+
+---
+
+### 🧠 Education & Study Groups
+
+- **Homework Help:** Explain school subjects like math, science, history, or literature.
+
+- **Simplify Concepts:** Break down complex ideas into simpler terms.
+
+- **Essay Drafting & Feedback:** Help outline or refine writing assignments.
+
+- **Test Prep:** Generate sample quiz questions or flashcards.
+
+---
+
+### 💻 Developer & Tech Servers
+
+- **Code Examples:** Ask for quick snippets or template functions.
+
+- **Bug Explanations:** Paste errors or stack traces and get clarity.
+
+- **Tool/Library Info:** Get overviews or usage of tech stacks and frameworks.
+
+- **Shell & Git Help:** Ask for common terminal commands or version control fixes.
+
+---
+
+### ✍️ Writing & Creative Spaces
+
+- **Story & Prompt Generator:** Get creative writing ideas and scenarios.
+
+- **Character Development:** Flesh out backstories, names, and personality traits.
+
+- **Grammar/Proofreading:** Check your writing or improve tone and clarity.
+
+- **Lyrics, Poetry, or Scripts:** Generate creative content in different formats.
+
+---
+
+### 🎮 Gaming Communities
+
+- **Game Strategy:** Get help understanding mechanics or tactics.
+
+- **Trivia & Lore:** Ask about game history, universe, or character backgrounds.
+
+- **In-Game Name Generator:** Come up with fun usernames, teams, or character names.
+
+- **Server Bot Help:** Explain bot commands and features for moderation or games.
+
+---
+
+### 🧘 Mental Health & Wellness Servers
+
+- **Daily Affirmations:** Ask for a confidence boost or positive quote.
+
+- **Stress Relief Tips:** Get breathing techniques or quick calming advice.
+
+- **Motivational Messages:** Ask for support when feeling down or unmotivated.
+
+- **Mindfulness Ideas:** Learn quick mindfulness practices or journaling prompts.
+
+---
+
+### 🛠 Productivity & Workspaces
+
+- **Task Breakdown:** Help plan out big tasks into smaller steps.
+
+- **Meeting Summaries:** Summarize meeting notes or chat logs.
+
+- **Decision Helper:** List pros and cons or rank options.
+
+- **Goal Planning:** Outline goals and track progress ideas.
+
+---
+
+### 🧾 Business & Professional Groups
+
+- **Email Drafting:** Ask for professional email templates or subject lines.
+
+- **Proposal Feedback:** Review or improve business ideas and summaries.
+
+- **Resume Advice:** Ask for resume bullet points, formatting tips, or mock interview questions.
+
+- **Marketing Copy:** Generate slogans, hooks, or ad descriptions.
+
+---
+
+### 🌐 Language & Translation Servers
+
+- **Quick Translation:** Translate short phrases between multiple languages.
+
+- **Language Learning Tips:** Ask for grammar rules, common phrases, or study strategies.
+
+- **Cultural Context:** Get cultural insights or idiomatic translations.
+
+- **Vocabulary Builder:** Practice synonyms, antonyms, or themed word lists.
+
+---
+
+### 📚 Conversation Intelligence
+
+- **Chat Summarization:** Use \`/summarize_chat\` to get a quick, AI-generated summary of the last few messages in a channel.
+
+- **Conversation Catch-Up:** Returning to an active server? Summarize recent discussion threads to get up to speed instantly.
+
+- **Message Context Overview:** Summarize past messages with sender names included to get a snapshot of group discussions.
+
+- **Info Compression:** Shrink long chats into digestible summaries for note-taking, archiving, or decision-making.
+
+---
+
+## 📜 Slash Commands
+
+InfoBot offers a rich set of slash commands to help users with writing, translation, summaries, insights, and more.
+
+| Command              | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| \`/ask\`               | Ask anything — InfoBot will respond with friendly, useful answers.          |
+| \`/summarize\`         | Summarize any block of text into a short and clear explanation.             |
+| \`/summarize_chat\`    | Summarize the last 'N' messages in a channel with user names and key points.  |
+| \`/translate\`         | Translate a message into any language you specify.                          |
+| \`/define\`            | Define a word or phrase in simple terms.                                    |
+| \`/explain\`           | Get a breakdown of complex concepts or topics.                              |
+| \`/suggest\`           | Get creative ideas, names, prompts, or suggestions for any topic.           |
+| \`/write\`             | Generate content like captions, tweets, bios, or intros.                    |
+| \`/correct\`           | Fix grammar, spelling, and improve tone of any sentence.                    |
+| \`/sentiment_analysis\`| Analyze the tone, emotion, and intent of a message.                         |
+| \`/quote\`             | Get a motivational or themed quote with author attribution.                 |
+| \`/commands\`          | View a link to the full list of commands and documentation.                 |
+| \`/about_infobot\`     | Learn about InfoBot's capabilities and features.                            |
+
+## 📸 Screenshots
+
+Here are slash commands examples of InfoBot in action:
+
+- **\`/about_infobot\` Command:**  
+
+  ![Screenshot](screenshots//About_Command_Screenshot.png)
+
+---
+
+- **\`/ask\` Command:**  
+
+  ![Screenshot](screenshots//Ask_Command.png)
+
+  ![Screenshot](screenshots//Ask_Command_2.png)
+
+---
+
+- **\`/summarize_chat\` Command:**  
+
+  ![Screenshot](screenshots//Summarize_Chat_Command.png)
+
+---
+
+- **\`/translate\` Command:**  
+
+  ![Screenshot](screenshots//Translate_Command_1.png)
+
+  ![Screenshot](screenshots//Translate_Command_2.png)
+
+  ![Screenshot](screenshots//Translate_Command_3.png)
+
+---
+
+- **\`/define\` Command:**  
+
+  ![Screenshot](screenshots//Define_Command.png)
+
+---
+
+- **\`/summarize\` Command:**  
+
+  ![Screenshot](screenshots//Summary_Command.png)
+
+  ![Screenshot](screenshots//Summary_Command_2.png)
+
+---
+
+- **\`/explain\` Command:**  
+
+  ![Screenshot](screenshots//Explain_Command.png)
+
+---
+
+- **\`/suggest\` Command:**  
+
+  ![Screenshot](screenshots//Suggest_Command.png)
+
+  ![Screenshot](screenshots//Suggest_Command_1.png)
+
+---
+
+- **\`/write\` Command:**  
+
+  ![Screenshot](screenshots//Write_Command_1.png)
+
+  ![Screenshot](screenshots//Write_Command_2.png)
+
+  ![Screenshot](screenshots//Write_Command_3.png)
+
+  ![Screenshot](screenshots//Write_Command_4.png)
+
+---
+
+- **\`/correct\` Command:**
+
+  ![Screenshot](screenshots//Correct_Command.png)
+
+---
+
+- **\`/sentiment_analysis\` Command:**
+
+  ![Screenshot](screenshots//Sentiment_Command.png)
+
+---
+
+- **\`/quote\` Command:**
+
+  ![Screenshot](screenshots//Quote_Command.png)
+
+---
+
+Here are conversation examples of InfoBot in action:
+
+- **Conversation About Sentience:**
+
+  ![Screenshot](screenshots//Convo1.png)
+
+---
+
+- **Basic Python Coding:**
+
+  ![Screenshot](screenshots//Convo2.png)
+
+---
+
+- **Riddles and Games:**
+
+  ![Screenshot](screenshots//Convo3_1.png)
+  ![Screenshot](screenshots//Convo3_2.png)
+
+---
+
+- **Coding Quiz:**
+
+  ![Screenshot](screenshots//Convo4.png)
+
+---
+
+- **Math and Chemistry Questions:**
+
+  ![Screenshot](screenshots//Convo5.png)
+
+---
+
+- **Business and Marketing Queries:**
+
+  ![Screenshot](screenshots//Convo6_1.png)
+  ![Screenshot](screenshots//Convo6_2.png)
+
+---
+
+- **Tasks Breakdown and Planning:**
+
+  ![Screenshot](screenshots//Convo7.png)
+
+---
+
+- **Meeting Chat Log Summarization:**
+
+  ![Screenshot](screenshots//Convo8.png)
+
+---
+
+- **Discord Bots and Commands:**
+
+  ![Screenshot](screenshots//Convo9.png)
+
+---
+
+- **Mental Health and Venting:**
+
+  ![Screenshot](screenshots//Convo10.png)
+
+---
+
+- **Codings Bugs:**
+
+  ![Screenshot](screenshots//Convo11_1.png)
+  ![Screenshot](screenshots//Convo11_2.png)
+
+---
+
+- **Advanced Excel Queries:**
+
+  ![Screenshot](screenshots//Convo12.png)
+`;
+
+
+
+    document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+    const redirectToDiscordBot = () => {
+  window.location.href = "https://discord.com/oauth2/authorize?client_id=1390443454198452276&permissions=2147552256&integration_type=0&scope=bot";
+};
+
+
+function makeTablesScrollable() {
+  const tables = document.querySelectorAll('#markdown-content table');
+
+  tables.forEach((table) => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('table-scrollable');
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+}
+
+makeTablesScrollable();
+
+document.getElementById('addToDiscord').addEventListener('click', () => {
+  const user = auth.currentUser;
+  if (user) {
+    redirectToDiscordBot();
+  } else {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    auth.signInWithPopup(provider)
+      .then(() => {
+        redirectToDiscordBot();
+      })
+      .catch(error => {
+        console.error("Google Sign-In Error:", error);
+        alert("Login failed. Please try again.");
+      });
+  }
+});
+
+
+function addExpandButtonsToImages() {
+  const images = document.querySelectorAll('#markdown-content img');
+
+  images.forEach(img => {
+   
+    const wrapper = document.createElement('div');
+    wrapper.style.position = 'relative';
+    wrapper.style.display = 'inline-block';
+    wrapper.style.margin = '10px 0';
+    wrapper.style.maxWidth = '100%';
+
+   
+    const icon = document.createElement('i');
+    icon.className = 'fas fa-expand';
+    icon.style.position = 'absolute';
+    icon.style.bottom = '8px';
+    icon.style.right = '8px';
+    icon.style.color = '#cc4444';
+    icon.style.background = '#222327';
+    icon.style.padding = '6px';
+    icon.style.borderRadius = '50%';
+    icon.style.cursor = 'pointer';
+    icon.style.fontSize = '14px';
+    icon.style.boxShadow = '0 2px 6px rgba(0,0,0,0.4)';
+    icon.title = 'Click to expand';
+
+   
+    const newImg = img.cloneNode(true);
+    newImg.style.cursor = 'zoom-in';
+
+   
+    img.replaceWith(wrapper);
+    wrapper.appendChild(newImg);
+    wrapper.appendChild(icon);
+
+   
+    wrapper.addEventListener('click', () => {
+      window.open(newImg.src, '_blank');
+    });
+  });
+}
+
+addExpandButtonsToImages();
+
+document.getElementById('logoBtn').addEventListener('click', () => {
+  const user = auth.currentUser;
+  if (user) {
+    redirectToDiscordBot();
+  } else {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    auth.signInWithPopup(provider)
+      .then(() => {
+        redirectToDiscordBot();
+      })
+      .catch(error => {
+        console.error("Google Sign-In Error:", error);
+        alert("Login failed. Please try again.");
+      });
+  }
+});
+  </script>
+  <p onclick="window.location.replace('index.html')" align="center" style="color: white; margin-top: 35px; cursor: pointer;">© InfoBot | All rights reserved.</p>
+</body>
+</html>
