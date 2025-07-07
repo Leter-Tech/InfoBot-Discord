@@ -2,7 +2,7 @@
 
 **Ask anything, anytime.**
 
-InfoBot is an intelligent Discord assistant. Mention it or reply to it in any server conversation, and it will respond with helpful, friendly, and context-aware replies. You can also use the `/ask` command to get assistance directly.
+InfoBot is an intelligent Discord assistant. Mention it or reply to it in any server conversation, and it will respond with helpful, friendly, and context-aware replies. You can also use the slash commands to get assistance directly.
 
 ---
 
@@ -12,7 +12,7 @@ InfoBot is an intelligent Discord assistant. Mention it or reply to it in any se
 
 - 💬 **Conversational Context:** Replies to threaded messages with prior context when possible.
 
-- 🤖 **Slash Command Support:** Use `/ask` to get assistance directly from the bot.
+- 🤖 **Slash Command Support:** Use `/ask`, `/write` and other commands to get assistance directly from the bot.
 
 - 👤 **Personalized Responses:** Replies directly to users by name for a more natural experience.
 
@@ -170,17 +170,171 @@ InfoBot offers a rich set of slash commands to help users with writing, translat
 | `/commands`          | View a link to the full list of commands and documentation.                 |
 | `/about_infobot`     | Learn about InfoBot's capabilities and features.                            |
 
+---
+
 ## 📸 Screenshots
 
-**🚧 Under Construction 🚧**
+Here are slash commands examples of InfoBot in action:
 
-Here are some examples of InfoBot in action:
+- **`/about_infobot` Command:**  
 
-- **AI-Powered Reply Example:**  
-  ![Screenshot of InfoBot replying in context](screenshot1.png)
+  - ![Screenshot](landing_page\screenshots\About_Command_Screenshot.png)
 
-- **Slash Command Interface:**  
-  ![Screenshot of /ask command in Discord](screenshot2.png)
+---
 
-- **Chat Summarization:**  
-  ![Screenshot showing summarized conversation](screenshot3.png)
+- **`/ask` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Ask_Command.png)
+
+  - ![Screenshot](landing_page\screenshots\Ask_Command_2.png)
+
+---
+
+- **`/summarize_chat` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Summarize_Chat_Command.png)
+
+---
+
+- **`/translate` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Translate_Command_1.png)
+
+  - ![Screenshot](landing_page\screenshots\Translate_Command_2.png)
+
+  - ![Screenshot](landing_page\screenshots\Translate_Command_3.png)
+
+---
+
+- **`/define` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Define_Command.png)
+
+---
+
+- **`/summarize` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Summary_Command.png)
+
+  - ![Screenshot](landing_page\screenshots\Summary_Command_2.png)
+
+---
+
+- **`/explain` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Explain_Command.png)
+
+---
+
+- **`/suggest` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Suggest_Command.png)
+
+  - ![Screenshot](landing_page\screenshots\Suggest_Command_1.png)
+
+---
+
+- **`/write` Command:**  
+
+  - ![Screenshot](landing_page\screenshots\Write_Command_1.png)
+
+  - ![Screenshot](landing_page\screenshots\Write_Command_2.png)
+
+  - ![Screenshot](landing_page\screenshots\Write_Command_3.png)
+
+  - ![Screenshot](landing_page\screenshots\Write_Command_4.png)
+
+---
+
+- **`/correct` Command:**
+
+  - ![Screenshot](landing_page\screenshots\Correct_Command.png)
+
+---
+
+- **`/sentiment_analysis` Command:**
+
+  - ![Screenshot](landing_page\screenshots\Sentiment_Command.png)
+
+---
+
+- **`/quote` Command:**
+
+  - ![Screenshot](landing_page\screenshots\Quote_Command.png)
+
+---
+
+Here are conversation examples of InfoBot in action:
+
+- **Conversation about sentience:**
+
+  - ![Screenshot](landing_page\screenshots\Convo1.png)
+
+---
+
+- **Basic Python Coding:**
+
+  - ![Screenshot](landing_page\screenshots\Convo2.png)
+
+---
+
+- **Riddles and Games:**
+
+  - ![Screenshot](landing_page\screenshots\Convo3_1.png)
+  - ![Screenshot](landing_page\screenshots\Convo3_2.png)
+
+---
+
+- **Coding Quiz:**
+
+  - ![Screenshot](landing_page\screenshots\Convo4.png)
+
+---
+
+- **Math and Chemistry Questions:**
+
+  - ![Screenshot](landing_page\screenshots\Convo5.png)
+
+---
+
+- **Business and Marketing Queries:**
+
+  - ![Screenshot](landing_page\screenshots\Convo6_1.png)
+  - ![Screenshot](landing_page\screenshots\Convo6_2.png)
+
+---
+
+- **Tasks Breakdown and Planning:**
+
+  - ![Screenshot](landing_page\screenshots\Convo7.png)
+
+---
+
+- **Meeting Chat Log Summarization:**
+
+  - ![Screenshot](landing_page\screenshots\Convo8.png)
+
+---
+
+- **Discord Bots and Commands:**
+
+  - ![Screenshot](landing_page\screenshots\Convo9.png)
+
+---
+
+- **Mental Health and Venting:**
+
+  - ![Screenshot](landing_page\screenshots\Convo10.png)
+
+---
+
+- **Codings Bugs:**
+
+  - ![Screenshot](landing_page\screenshots\Convo11_1.png)
+  - ![Screenshot](landing_page\screenshots\Convo11_2.png)
+
+---
+
+- **Advanced Excel Queries:**
+
+  - ![Screenshot](landing_page\screenshots\Convo12.png)
