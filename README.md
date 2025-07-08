@@ -341,6 +341,12 @@ Here are conversation examples of InfoBot in action:
 
 ---
 
+## 🤖 InfoBot Profile
+
+  ![Screenshot](landing_page/screenshots/Bot_Profile.png)
+
+---
+
 ## 🤝 **Contributing**  
 
 Contributions are always welcome! Please follow these steps:
